@@ -8,6 +8,8 @@ import Error from './pages/Error/Error';
 
 
 import Header from './components/Header/Header';
+import NotFoundFilmes from './components/NotFoundFilmes/NotFoundFilmes';
+import MeusFilmes from './pages/MeusFilmes/MeusFilmes';
 
 
 function rotas() {
@@ -17,9 +19,10 @@ function rotas() {
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/filme/:id" element={<Filme/>}/>
-
+            <Route path='/MeusFilmes' element={<MeusFilmes/>}/>
 
             <Route path="*" element={<Error/>}/>
+            <Route path="/not" element={<NotFoundFilmes/>}/>
         </Routes>
     </BrowserRouter>
   );

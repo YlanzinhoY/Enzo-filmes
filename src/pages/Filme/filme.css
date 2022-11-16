@@ -2,8 +2,6 @@
 body{
     min-height: 145vh;
 }
-.filmesDetalhes{
-}
 
 .detalhes{
     display: flex;
@@ -23,8 +21,8 @@ body{
 
 .detalhes img{
     border-radius: 4px;
-    min-width: 30vw;
-    max-width: 92vw;
+    min-width: 25vw;
+    max-width: 80vw;
     object-fit: cover;
 }
 

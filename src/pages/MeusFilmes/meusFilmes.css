@@ -1,0 +1,62 @@
+.lista{
+    padding: 2px;
+}
+
+.listasContent h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contentList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: darkgray;
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 9px;
+    border: 2px solid black;
+    
+}
+
+.contentList img{
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgb(91, 27, 74);
+}
+
+.contentList a {
+    color: #000;
+    background-color: aliceblue;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.btnExcluir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnExcluir button {
+    color: #000;
+    background-color: aliceblue;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.avisoSpan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

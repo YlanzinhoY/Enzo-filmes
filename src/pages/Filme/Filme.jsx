@@ -1,7 +1,8 @@
 import React from 'react'
 
 import {useEffect, useState} from 'react'
-import {Link, useParams} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom'
+import  { toast  }  from  'react-toastify' 
 
 import api from '../../services/Api'
 
@@ -11,6 +12,8 @@ function Filme() {
   const {id} = useParams()
   const [filme, setFilme] = useState({})
   const [loading, setLoading] = useState(true)
+  const navigate = useNavigate()
+
 
   useEffect(() => {
     async function loadFilme(){
@@ -25,17 +28,29 @@ function Filme() {
         setLoading(false)
       })
       .catch(() => {
-        console.log('error')
+        navigate("/not", {replace: true})
+        return
       })
     }
-
-
     loadFilme()
-    return () => {
-      console.log('componente desmontado')
+  },[navigate, id])
+
+
+  function salvarFilme(){
+    const meusFilmes = localStorage.getItem("@enzoFilme")
+
+    let filmesSalvos = JSON.parse(meusFilmes) || []
+
+    const temFilme = filmesSalvos.some((value) => value.id === filme.id)
+
+    if(temFilme){
+      toast.warn("Filme já está adicionado na sua lista!")
+    } else {
+      filmesSalvos.push(filme)
+      localStorage.setItem("@enzoFilme", JSON.stringify(filmesSalvos))
+      toast.success('Filme adicionado com sucesso!')
     }
-  
-  },[])
+  }
 
 
   if(loading){
@@ -55,9 +70,9 @@ function Filme() {
           <h3 className='nota'>Avaliação: {filme.vote_average.toFixed(1)} / 10</h3>
       </section>
       <div className='area-buttons'>
-                <button>Salvar nos meus filmes</button>
+                <button onClick={salvarFilme}>Salvar nos meus filmes</button>
                 <button>
-                    <a href='#'>Trailer</a>
+                    <a href={`https://youtube.com/results?search_query=${filme.title} trailer`} target="_blank" rel='external'>Trailer</a>
                 </button>
           </div>
     </div>

@@ -1,7 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { json, Link } from 'react-router-dom'
 import Api from '../../services/Api'
+import Filme from '../Filme/Filme'
 
 // css
 
@@ -28,6 +29,7 @@ const Home = () => {
     loadFilmes()
 
   },[])
+
 
   if(loading){
     return(
