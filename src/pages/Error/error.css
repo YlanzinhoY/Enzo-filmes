@@ -1,0 +1,12 @@
+.error{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error a {
+    margin-top: 10px;
+    color: #000;
+}

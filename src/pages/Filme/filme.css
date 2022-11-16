@@ -1,0 +1,55 @@
+
+body{
+    min-height: 145vh;
+}
+.filmesDetalhes{
+}
+
+.detalhes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.title{
+    margin-bottom: 12px;
+}
+.dataLancamento{
+    margin: 15px;
+}
+
+.detalhes img{
+    border-radius: 4px;
+    min-width: 30vw;
+    max-width: 92vw;
+    object-fit: cover;
+}
+
+.sinopse > p{
+    margin-top: 20px;
+    line-height:30px;
+    letter-spacing: 1.2px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.nota{
+    margin-top: 10px;
+    font-size: 23px;
+}
+
+.area-buttons button{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.area-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
