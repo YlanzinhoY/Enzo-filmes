@@ -1,3 +1,0 @@
-baseApi: https://api.themoviedb.org/3/
-
-api: https://api.themoviedb.org/3/movie/now_playing?api_key=aa4b0efa2616ee2802aa76693545c2b0&language=pt-br
